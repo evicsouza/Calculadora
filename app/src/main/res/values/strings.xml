@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Calculadora</string>
+    <string name="buttonUm">Um</string>
+    <string name="buttonDois">Dois</string>
+    <string name="buttonTres">Três</string>
+    <string name="buttonQuatro">Quatro</string>
+    <string name="buttonCinco">Cinco</string>
+    <string name="buttonSeis">Seis</string>
+    <string name="buttonSete">Sete</string>
+    <string name="buttonOito">Oito</string>
+    <string name="buttonNove">Nove</string>
+    <string name="buttonZero">Zero</string>
+    <string name="buttonSubtracao"> Menos </string>
+    <string name="buttonAdicao"> Mais </string>
+    <string name="buttonDivisao"> Dividido </string>
+    <string name="buttonMultiplicacao"> Vezes </string>
+    <string name="buttonResultado"> Igual a </string>
+</resources>

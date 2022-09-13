@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/layoutVertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="4dp"
+        android:foregroundGravity="center"
+        android:gravity="center|center_horizontal|center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textViewResultado"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:text="TextView" />
+
+        <LinearLayout
+            android:id="@+id/layoutHorizontalUm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2px"
+            android:layout_marginVertical="2px"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonUm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2px"
+                android:layout_marginVertical="2px"
+                android:layout_weight="1"
+                android:text="@string/buttonUm" />
+
+            <Button
+                android:id="@+id/buttonDois"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2px"
+                android:layout_marginVertical="2px"
+                android:layout_weight="1"
+                android:text="@string/buttonDois" />
+
+            <Button
+                android:id="@+id/buttonTres"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2px"
+                android:layout_marginVertical="2px"
+                android:layout_weight="1"
+                android:text="@string/buttonTres" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutHorizontalDois"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonQuatro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2px"
+                android:layout_marginVertical="2px"
+                android:layout_weight="1"
+                android:text="@string/buttonQuatro" />
+
+            <Button
+                android:id="@+id/buttonCinco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2px"
+                android:layout_marginVertical="2px"
+                android:layout_weight="1"
+                android:text="@string/buttonCinco" />
+
+            <Button
+                android:id="@+id/buttonSeis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2px"
+                android:layout_marginVertical="2px"
+                android:layout_weight="1"
+                android:text="@string/buttonSeis" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutHorizontalTres"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonSete"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2px"
+                android:layout_marginVertical="2px"
+                android:layout_weight="1"
+                android:text="@string/buttonSete" />
+
+            <Button
+                android:id="@+id/buttonOito"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2px"
+                android:layout_marginVertical="2px"
+                android:layout_weight="1"
+                android:text="@string/buttonOito" />
+
+            <Button
+                android:id="@+id/buttonNove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2px"
+                android:layout_marginVertical="2px"
+                android:layout_weight="1"
+                android:text="@string/buttonNove" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutHorizontalQuatro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2px"
+            android:layout_marginVertical="2px"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonSubtracao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2px"
+                android:layout_marginVertical="2px"
+                android:layout_weight="1"
+                android:text="@string/buttonSubtracao" />
+
+            <Button
+                android:id="@+id/buttonZero"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2px"
+                android:layout_marginVertical="2px"
+                android:layout_weight="1"
+                android:text="@string/buttonZero" />
+
+            <Button
+                android:id="@+id/buttonAdicao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2px"
+                android:layout_marginVertical="2px"
+                android:layout_weight="1"
+                android:text="@string/buttonAdicao" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layoutHorizontalCinco"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="2px"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonDivisao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2px"
+                android:layout_marginVertical="2px"
+                android:layout_weight="1"
+                android:text="@string/buttonDivisao" />
+
+            <Button
+                android:id="@+id/buttonResultado"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2px"
+                android:layout_marginVertical="2px"
+                android:layout_weight="1"
+                android:text="@string/buttonResultado" />
+
+            <Button
+                android:id="@+id/buttonMultiplicacao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="2px"
+                android:layout_marginVertical="2px"
+                android:layout_weight="1"
+                android:text="@string/buttonMultiplicacao" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
