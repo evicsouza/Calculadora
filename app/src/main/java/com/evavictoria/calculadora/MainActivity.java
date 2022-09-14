@@ -7,205 +7,84 @@ import android.widget.Button;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.evavictoria.calculadora.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity {
 
-    Button adicaoButton;
-    Button subtracaoButton;
-    Button multiplicacaoButton;
-    Button divisaoButton;
-    Double result;
-    Double numeroUm;
-    Double numeroDois;
-//    int numeroTres;
-//    int numeroQuatro;
-//    int numeroCinco;
-//    int numeroSeis;
-//    int numeroSete;
-//    int numeroOito;
-//    int numeroNove;
-//    int numeroZero;
+    Double primeiroValor;
+    Double segundoValor;
+    String resultado;
+
+    ActivityMainBinding binding;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        criarOuvintes();
-    }
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        View view = binding.getRoot();
+        setContentView(view);
 
-    private void criarOuvintes(){
-        adicaoButton = findViewById(R.id.buttonAdicao);
-        subtracaoButton = findViewById(R.id.buttonSubtracao);
-        multiplicacaoButton = findViewById(R.id.buttonMultiplicacao);
-        divisaoButton = findViewById(R.id.buttonDivisao);
-        Button resultado = findViewById(R.id.buttonResultado);
-        adicaoButton.setOnClickListener(v -> adicionar());
-        subtracaoButton.setOnClickListener(v -> subtrair());
-        multiplicacaoButton.setOnClickListener(v -> multiplicar());
-        divisaoButton.setOnClickListener(v -> dividir());
-        resultado.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                TextView txtV = (TextView) findViewById(R.id.textViewResultado);
-                txtV.setText(result.toString());
-            }
-        });
-    }
 
-    public void recuperarNumeroUm(){
-        Button buttonUm = (Button)findViewById(R.id.buttonUm);
-        buttonUm.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                numeroUm = 1.0;
-            }
+        binding.buttonUm.setOnClickListener(v -> {
+            atualizaVisor("1", true);
         });
-        Button buttonDois = (Button)findViewById(R.id.buttonDois);
-        buttonUm.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                numeroUm = 2.0;
-            }
-        });
-        Button buttonTres = (Button)findViewById(R.id.buttonTres);
-        buttonUm.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                numeroUm = 3.0;
-            }
-        });
-        Button buttonQuatro = (Button)findViewById(R.id.buttonQuatro);
-        buttonUm.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                numeroUm = 4.0;
-            }
-        });
-        Button buttonCinco = (Button)findViewById(R.id.buttonCinco);
-        buttonUm.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                numeroUm = 5.0;
-            }
-        });
-        Button buttonSeis = (Button)findViewById(R.id.buttonSeis);
-        buttonUm.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                numeroUm = 6.0;
-            }
-        });
-        Button buttonSete = (Button)findViewById(R.id.buttonSete);
-        buttonUm.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                numeroUm = 7.0;
-            }
-        });
-        Button buttonOito = (Button)findViewById(R.id.buttonOito);
-        buttonUm.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                numeroUm = 8.0;
-            }
-        });
-        Button buttonNove = (Button)findViewById(R.id.buttonNove);
-        buttonUm.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                numeroUm = 9.0;
-            }
-        });
-        Button buttonZero = (Button)findViewById(R.id.buttonZero);
-        buttonUm.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                numeroUm = 0.0;
-            }
+        binding.buttonDois.setOnClickListener(v -> {
+            atualizaVisor("2", true);
+                });
+        binding.buttonTres.setOnClickListener(v-> {
+                    atualizaVisor("3", true);
+                });
+        binding.buttonQuatro.setOnClickListener(v-> {
+            atualizaVisor("4", true);
+                });
+        binding.buttonCinco.setOnClickListener(v -> {
+            atualizaVisor("5", true);
+                });
+        binding.buttonSeis.setOnClickListener(v -> {
+            atualizaVisor("6", true);
+                });
+        binding.buttonSete.setOnClickListener(v -> {
+                    atualizaVisor("7", true);
+                });
+        binding.buttonOito.setOnClickListener(v -> {
+            atualizaVisor("8", true);
+                });
+        binding.buttonNove.setOnClickListener(v -> {
+            atualizaVisor("9", true);
+                });
+        binding.buttonZero.setOnClickListener(v -> {
+            atualizaVisor("0", true);
         });
 
-    }
-    public void recuperarNumeroDois(){
-        Button buttonUm = (Button)findViewById(R.id.buttonUm);
-        buttonUm.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                numeroDois = 1.0;
-            }
+
+
+
+        binding.buttonAdicao.setOnClickListener(v -> {
+            atualizaVisor("+", false);
         });
-        Button buttonDois = (Button)findViewById(R.id.buttonDois);
-        buttonUm.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                numeroDois = 2.0;
-            }
+        binding.buttonSubtracao.setOnClickListener(v -> {
+            atualizaVisor("-", false);
         });
-        Button buttonTres = (Button)findViewById(R.id.buttonTres);
-        buttonUm.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                numeroDois = 3.0;
-            }
+        binding.buttonMultiplicacao.setOnClickListener(v -> {
+            atualizaVisor("*", false);
         });
-        Button buttonQuatro = (Button)findViewById(R.id.buttonQuatro);
-        buttonUm.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                numeroDois = 4.0;
-            }
-        });
-        Button buttonCinco = (Button)findViewById(R.id.buttonCinco);
-        buttonUm.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                numeroDois = 5.0;
-            }
-        });
-        Button buttonSeis = (Button)findViewById(R.id.buttonSeis);
-        buttonUm.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                numeroDois = 6.0;
-            }
-        });
-        Button buttonSete = (Button)findViewById(R.id.buttonSete);
-        buttonUm.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                numeroDois = 7.0;
-            }
-        });
-        Button buttonOito = (Button)findViewById(R.id.buttonOito);
-        buttonUm.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                numeroDois = 8.0;
-            }
-        });
-        Button buttonNove = (Button)findViewById(R.id.buttonNove);
-        buttonUm.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                numeroDois = 9.0;
-            }
-        });
-        Button buttonZero = (Button)findViewById(R.id.buttonZero);
-        buttonUm.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                numeroDois = 0.0;
-            }
+        binding.buttonDivisao.setOnClickListener(v -> {
+            atualizaVisor("/", false);
         });
 
     }
 
-    private Double adicionar() {
-        recuperarNumeroUm();
-        recuperarNumeroDois();
-        result = numeroUm + numeroDois;
-        return result;
-
-    }
-    private Double subtrair() {
-        recuperarNumeroUm();
-        recuperarNumeroDois();
-        result = numeroUm - numeroDois;
-        return result;
-
-    }
-    private Double multiplicar() {
-        recuperarNumeroUm();
-        recuperarNumeroDois();
-        result = numeroUm * numeroDois;
-        return result;
-
-    }
-    private String dividir() {
-        recuperarNumeroUm();
-        recuperarNumeroDois();
-        if(numeroDois != 0) {
-            result = numeroUm / numeroDois;
-            return result.toString();
+    public void atualizaVisor(String string, Boolean limpaDados){
+        if(!resultado.isEmpty()){
+            binding.textViewResultado.setText("");
         }
-        return "Não é possível dividir por zero";
+        if(limpaDados){
+            resultado = "";
+        }else{
+            binding.textViewResultado.append(resultado.toString());
+            binding.textViewResultado.append(string);
+            resultado = "";
+        }
     }
 }
