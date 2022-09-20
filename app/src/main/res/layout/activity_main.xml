@@ -1,204 +1,206 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/visor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/visorPrincipal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center" />
+        </LinearLayout>
+
+    </RelativeLayout>
 
     <LinearLayout
-        android:id="@+id/layoutVertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="4dp"
-        android:foregroundGravity="center"
-        android:gravity="center|center_horizontal|center_vertical"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="0dp"
+        android:layout_weight="0.14"
+        android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/textViewResultado"
-            android:layout_width="match_parent"
-            android:layout_height="125dp" />
-
-        <LinearLayout
-            android:id="@+id/layoutHorizontalUm"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="2px"
-            android:layout_marginVertical="2px"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/buttonUm"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="2px"
-                android:layout_marginVertical="2px"
-                android:layout_weight="1"
-                android:text="@string/buttonUm" />
-
-            <Button
-                android:id="@+id/buttonDois"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="2px"
-                android:layout_marginVertical="2px"
-                android:layout_weight="1"
-                android:text="@string/buttonDois" />
-
-            <Button
-                android:id="@+id/buttonTres"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="2px"
-                android:layout_marginVertical="2px"
-                android:layout_weight="1"
-                android:text="@string/buttonTres" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutHorizontalDois"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/buttonQuatro"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="2px"
-                android:layout_marginVertical="2px"
-                android:layout_weight="1"
-                android:text="@string/buttonQuatro" />
-
-            <Button
-                android:id="@+id/buttonCinco"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="2px"
-                android:layout_marginVertical="2px"
-                android:layout_weight="1"
-                android:text="@string/buttonCinco" />
-
-            <Button
-                android:id="@+id/buttonSeis"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="2px"
-                android:layout_marginVertical="2px"
-                android:layout_weight="1"
-                android:text="@string/buttonSeis" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutHorizontalTres"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/buttonSete"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="2px"
-                android:layout_marginVertical="2px"
-                android:layout_weight="1"
-                android:text="@string/buttonSete" />
-
-            <Button
-                android:id="@+id/buttonOito"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="2px"
-                android:layout_marginVertical="2px"
-                android:layout_weight="1"
-                android:text="@string/buttonOito" />
-
-            <Button
-                android:id="@+id/buttonNove"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="2px"
-                android:layout_marginVertical="2px"
-                android:layout_weight="1"
-                android:text="@string/buttonNove" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutHorizontalQuatro"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginHorizontal="2px"
-            android:layout_marginVertical="2px"
-            android:orientation="horizontal">
-
-            <Button
-                android:id="@+id/buttonSubtracao"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="2px"
-                android:layout_marginVertical="2px"
-                android:layout_weight="1"
-                android:text="@string/buttonSubtracao" />
-
-            <Button
-                android:id="@+id/buttonZero"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="2px"
-                android:layout_marginVertical="2px"
-                android:layout_weight="1"
-                android:text="@string/buttonZero" />
-
-            <Button
-                android:id="@+id/buttonAdicao"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="2px"
-                android:layout_marginVertical="2px"
-                android:layout_weight="1"
-                android:text="@string/buttonAdicao" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/layoutHorizontalCinco"
-            android:layout_width="match_parent"
+        <Button
+            android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_marginRight="2px"
-            android:orientation="horizontal">
+            android:layout_weight="0.25"
+            android:onClick="handleButtonLimpar"
+            android:text="C" />
 
-            <Button
-                android:id="@+id/buttonDivisao"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="2px"
-                android:layout_marginVertical="2px"
-                android:layout_weight="1"
-                android:text="@string/buttonDivisao" />
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:onClick="handleButtonDesfazer"
+            android:adjustViewBounds="true"
+            android:padding="24dp"
+            android:scaleType="fitCenter" />
 
-            <Button
-                android:id="@+id/buttonResultado"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="2px"
-                android:layout_marginVertical="2px"
-                android:layout_weight="1"
-                android:text="@string/buttonResultado" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:onClick="handleButtonPorcentagem"
+            android:text="%" />
 
-            <Button
-                android:id="@+id/buttonMultiplicacao"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="2px"
-                android:layout_marginVertical="2px"
-                android:layout_weight="1"
-                android:text="@string/buttonMultiplicacao" />
-        </LinearLayout>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:onClick="handleButtonDivide"
+            android:text="÷" />
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.14"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:onClick="handleButtonSete"
+            android:text="7" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:onClick="handleButtonOito"
+            android:text="8" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:onClick="handleButtonNove"
+            android:text="9" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:onClick="handleButtonMultiplica"
+            android:text="×" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.14"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:onClick="handleButtonQuatro"
+            android:text="4" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:onClick="handleButtonCinco"
+            android:text="5" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:onClick="handleButtonSeis"
+            android:text="6" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:onClick="handleButtonSubtrai"
+            android:text="-" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.14"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:onClick="handleButtonUm"
+            android:text="1" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:onClick="handleButtonDois"
+            android:text="2" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:onClick="handleButtonTres"
+            android:text="3" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:onClick="handleButtonSoma"
+            android:text="+" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.14"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:onClick="handleButtonZero"
+            android:text="0" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:onClick="handleButtonVirgula"
+            android:text="," />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            android:onClick="handleButtonResultado"
+            android:text="=" />
+
+    </LinearLayout>
+
+</LinearLayout>
